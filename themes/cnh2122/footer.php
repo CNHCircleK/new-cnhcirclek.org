@@ -1,0 +1,1 @@
+<!--  responsible for bottom section of the site -->

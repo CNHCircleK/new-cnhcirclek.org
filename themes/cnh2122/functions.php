@@ -1,0 +1,1 @@
+<!-- For raw php code that can change how WP works fundamentally -->
