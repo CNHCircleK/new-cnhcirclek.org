@@ -54,4 +54,18 @@ with others.
 /*	0. CSS Reset
 /* -------------------------------------------------------------------------- */
 
+nav {
+	position: absolute;
+	width: 1440px;
+	height: 261px;
+	left: 0px;
+	top: -12px;
+}
 
+footer {
+	position: absolute;
+	width: 1440px;
+	height: 578px;
+	left: 0px;
+	top: 3394px;
+}
