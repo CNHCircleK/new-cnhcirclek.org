@@ -61,11 +61,140 @@ nav {
 	left: 0px;
 	top: -12px;
 }
-
+/* #16 Footer CSS */
 footer {
-	position: absolute;
-	width: 1440px;
-	height: 578px;
-	left: 0px;
-	top: 3394px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 3394px;
+    background: #003D79;
+}
+
+footer .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+    align-items: center;
+}
+
+footer .social-text {
+    width: 463px;
+    height: 25px;
+    left: 118px;
+    top: 3464px;
+
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.085em;
+
+    padding-top: 70px;
+
+    color: #FFFFFF;
+}
+
+footer .social-icons {
+    padding-top: 50px;
+}
+
+footer .contact-questions {
+    width: 300px;
+    height: 30px;
+    left: 200px;
+    top: 3619px;
+    
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.085em;
+
+    padding-top: 37px;
+    
+    color: #FFFFFF;
+}
+
+footer .contact-button {
+    width: 280px;
+    height: 62px;
+    left: 210px;
+    top: 3665px;
+    border: 0;
+
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.085em;
+    color: white;
+    
+    background: #00A4D8;
+    border-radius: 5px;;
+}
+
+footer .contact-box {
+    padding-top: 50px;
+}
+
+footer .ticket-box {
+    padding-top: 50px;
+    padding-bottom: 70px;
+}
+
+footer .contact-ticket {
+    width: 300px;
+    height: 47px;
+    left: 200px;
+    top: 3777px;
+    
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.085em;
+
+    padding-top: 37px;
+    
+    color: #FFFFFF; 
+}
+
+footer .kiwanis-logo {
+    padding-top: 136px;
+}
+
+footer .copyright {
+    width: 554px;
+    height: 102.08px;
+    top: 3727px;
+    left: 770px;
+
+    font-family: Myriad Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    padding-top: 44.39px;
+    padding-left: 30px;
+    padding-bottom: 150px;
+
+    color: #FFFFFF;
 }
