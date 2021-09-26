@@ -1,79 +1,56 @@
 <!-- main home page of the website -->
-<!DOCTYPE html>
-<html lang="en"> 
-    
-    <!-- FontAwesome CSS-->
-	<!-- Theme CSS -->
 	<?php
-		wp_head();
+		get_header();
 	?>
-
-<body>
-
+	<!--Main Wrapper for the website-->
     <div class="main-wrapper">
-	    <header class="page-title theme-bg-light text-center gradient py-5">
-			<h1 class="heading">Blog Home Page Heading</h1>
-		</header>
-		<article class="content px-3 py-5 p-md-5">
-	    <div class='container'>
-			<p class="mt-3 lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+		<!--Main column for the website aka the left col-->
+		<div class="main-col">
+			<!--Title and paragraph for front page-->
+			<div class="title-padding padding-left-indent">
+				<div class="title">Welcome to the</div>
+				<div class="title-blue">California-Neveda-Hawaii District</div>
+				<div class="title">of Circle K International</div>
+			</div>
 
-			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-				<div class="carousel-inner">
-				  <div class="carousel-item active">
-					<img src="images/slider2.jpg" class="d-block w-100" alt="1">
-				  </div>
-				  <div class="carousel-item">
-					<img src="images/slider1.jpg" class="d-block w-100" alt="2">
-				  </div>
-				  <div class="carousel-item">
-					<img src="images/slider3.jpg" class="d-block w-100" alt="3">
-				  </div>
+			<div class="paragraph padding-left-standard">Our organization of more than 2,100 college students across California, Nevada, and Hawaii believes in enriching the world through community service - one member, one child, and one community at a time.</div>
+			<!--Links container-->
+			<div class="front-page-links padding-left-standard">
+					<a href="about" class="page-link page-link-padding page-link-padding-right">
+						<div class="page-link-text">
+							About Us
+							<img src="<?php bloginfo('template_url'); ?>/assets/images/Vector.png" alt="vector" class="page-link-vector">
+							<img src="<?php bloginfo('template_url'); ?>/assets/images/link-line.png" alt="link-line" class="page-link-border">
+						</div>
+					</a>
+					<div class="page-link-spacing"></div>
+					<a href="about" class="page-link page-link-padding">
+						<div class="page-link-text">
+							Our Events
+							<img src="<?php bloginfo('template_url'); ?>/assets/images/Vector.png" alt="vector" class="page-link-vector">
+							<img src="<?php bloginfo('template_url'); ?>/assets/images/link-line.png" alt="link-line" class="page-link-border">
+						</div>
+					</a>
 				</div>
-				<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Next</span>
-				</a>
-			  </div>
-			  <section class="theme-bg-dark py-5 mt-4 text-center">
-				<h3 class='text-light d-block'>Subscribe to the Newsletter</h3>
-			    <form class="signup-form form-inline justify-content-center pt-3">
-                    <div class="form-group">
-                        <label class="sr-only" for="semail">Your email</label>
-                        <input type="email" id="semail" name="semail1" class="form-control mr-md-1 semail" placeholder="Enter email">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
-                </form>
-				</section>
-			<div class="row row-cols-1 mt-4 row-cols-md-2">
-				<div class="col mb-4">
-				  <div class="card">
-					<div class="card-body">
-					  <h5 class="card-title">Card title</h5>
-					  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+				<!--Tenet Cards-->
+				<div class="sub-title padding-left-indent">Our Tenets</div>
+				<div class="tenet-card-container">
+					<div class="tenet-card">
+						<div class="tenet-card-header-container">
+							Leadership
+							<img src="<?php bloginfo('template_url'); ?>/assets/images/smaller-vector.png" alt="vector" class="tenet-card-vector">
+							<img src="<?php bloginfo('template_url'); ?>/assets/images/smaller-link-line.png" alt="link-line">
+						</div>
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/leadership.png" alt="leadership" class="">
 					</div>
-				  </div>
 				</div>
-				<div class="col mb-4">
-				  <div class="card">
-					<div class="card-body">
-					  <h5 class="card-title">Card title</h5>
-					  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-					</div>
-				  </div>
-				</div>
+
+			</div>
+
 		</div>
-	    </article>
 	
     </div>
     
-    <?php
+	<?php
 		get_footer();
-	?>
-
-</body>
-</html> 
+	?> 

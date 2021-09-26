@@ -54,29 +54,280 @@ with others.
 /*	0. CSS Reset
 /* -------------------------------------------------------------------------- */
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	1. Document Setup
+/* -------------------------------------------------------------------------- */
+
 body {
-/* HOMEPAGE - LIGHT */
-
-position: relative;
-width:  100%;
-height: 100%;
-background: #F8F8F8;
-
+    /* HOMEPAGE - LIGHT */
+    font-family: Proxima Nova;
+    position: relative;
+    width:  100%;
+    height: 100%;
+    background: #F8F8F8;
 }
 
-nav {
-	position: absolute;
-	width: 1440px;
-	height: 261px;
-	left: 0px;
-	top: -12px;
+body .main-wrapper {
+   max-width: 1440px;
+   max-height: 2715px;
+   margin-left: auto;
+   margin-right: auto;
+   border: 5px solid red; 
 }
-/* #16 Footer CSS */
+
+body .main-col {
+    max-width: 948px;
+    max-height: 2715px;
+    border: 5px solid blue;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	2. Element Base
+/* -------------------------------------------------------------------------- */
+
+.title {
+    display: inline;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color:#000000;
+}
+
+.title-blue {
+    display: inline;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 43px;
+    line-height: 52px;
+    color:#00A4D8;
+}
+
+.paragraph {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.sub-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+}
+
+.page-link {
+    display: inline-block;
+    width: 330px;
+    height: 43px;
+    border: none;
+    background-color: #F8F8F8;
+}
+
+.page-link-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #003D79;
+}
+
+.page-link-vector {
+    position: relative;
+    float: right;
+}
+
+.page-link-border {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.tenet-card {
+    width: 262px;
+    height: 342px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*	3. Helper Classes
+/* -------------------------------------------------------------------------- */
+
+.padding-left-standard {
+    padding-left: 85px;
+}
+
+.padding-left-indent {
+    padding-left: 82px;
+}
+
+.padding-left-hanging {
+    padding-left: 77px;
+}
+
+.title-padding {
+    padding-top: 86px; 
+    padding-bottom: 56px;
+}
+
+.page-link-padding {
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 3px;
+    padding-bottom: 14px;
+}
+
+.page-link-spacing {
+    display: inline-block;
+    padding-right: 131px;
+}
+
+.front-page-links {
+    padding-top: 99px;
+    padding-bottom: 87px;
+}
+
+.tenet-card-container {
+    padding-left: 75px;
+    padding-top: 17px;
+}
+
+.tenet-card-header-container {
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 20px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #003D79;
+}
+
+.tenet-card-vector {
+    float: right;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	4. Site Header
+/* -------------------------------------------------------------------------- */
+
+.banner {
+    width: 100%;
+    height: 261px;
+    background: rgba(229, 229, 229, 0.66);
+}
+
+header .nav-container {
+    max-width: 1440px;
+    height: 261px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .nav-masthead-container {
+    padding-top: 26px;
+}
+
+header .nav-masthead {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+header .nav-ul-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    left: 4.34%;
+    right: 4.41%;
+    top: 75.86%;
+    bottom: 4.21%;
+
+    
+    padding-left: 62.5px;
+    padding-right: 63.5px;
+}
+
+header .nav-ul {
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+}
+
+header .nav-li {
+    text-decoration: none;
+    display: inline-block;
+
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.085em;
+
+    color: #000000;
+
+
+    /* Inside Auto Layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+header .nav-li-a-first {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-bottom: 37px;
+    padding-top: 34px;
+}
+
+header .nav-li-a-last {
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 37px;
+    padding-top: 34px;
+}
+
+header .nav-li-a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: #000000;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 37px;
+    padding-top: 34px;
+    margin-left: -5px;
+}
+
+header a:hover {
+    color:#00A4D8;
+}
+/* -------------------------------------------------------------------------- */
+/*	16. Site Footer
+/* -------------------------------------------------------------------------- */
 footer {
     position: absolute;
     width: 100%;
     left: 0px;
-    top: 100%;
+    top: 3394px;
     background: #003D79;
 }
 
@@ -153,8 +404,8 @@ footer .contact-button {
     letter-spacing: 0.085em;
     color: white;
     
-    background: #00A4D8;
-    border-radius: 5px;;
+    background-color: #00A4D8;
+    border-radius: 5px;
 }
 
 footer .contact-box {
@@ -195,7 +446,7 @@ footer .copyright {
     top: 3727px;
     left: 770px;
 
-    font-family: Myriad Pro;
+    font-family: Proxima Nova;
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
