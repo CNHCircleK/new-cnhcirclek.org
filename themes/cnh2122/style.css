@@ -151,25 +151,90 @@ body .main-col {
 .tenet-card {
     width: 262px;
     height: 342px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
+.tenet-card-image {
+    padding-left: 18px;
+    padding-bottom: 28px;
+}
+
+.tenet-card-link {
+    display: inline-block;
+}
+
+.news-box {
+    width: 1257px;
+    height: 224px;
+    background: #FFFFFF;
+    border: 5px solid #003D79;
+    box-sizing: border-box;
+    /* Dropshadow */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.news-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #003D79;
+}
+
+.news-posted-by {
+    padding-top: 10px;
+    padding-bottom: 19px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #696464;
+}
+
+.news-body {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.news-read-more {
+    width: 164px;
+    height: 58px;
+    background: #003D79;
+    border: none;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    color: #FFFFFF;
+}
+
+.featured-event-card {
+    width: 569px;
+    height: 442px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.featured-event-image {
+    padding-left: 41px;
+    padding-top: 10px;
+}
+
+.featured-event-link {
+    display: inline-block;
+}
 
 /* -------------------------------------------------------------------------- */
 /*	3. Helper Classes
 /* -------------------------------------------------------------------------- */
 
-.padding-left-standard {
-    padding-left: 85px;
-}
-
 .padding-left-indent {
     padding-left: 82px;
-}
-
-.padding-left-hanging {
-    padding-left: 77px;
 }
 
 .title-padding {
@@ -195,6 +260,7 @@ body .main-col {
 }
 
 .tenet-card-container {
+    display: inline-flexbox;
     padding-left: 75px;
     padding-top: 17px;
 }
@@ -212,6 +278,76 @@ body .main-col {
 
 .tenet-card-vector {
     float: right;
+}
+
+.tenet-card-padding {
+    padding-right: 12px;
+    display: inline-block;
+}
+
+.our-org-padding {
+    padding-top: 47px;
+    padding-bottom: 54px;
+}
+
+.our-org-container {
+    display: inline-flexbox;
+    padding-left: 147px;
+}
+
+.our-org-image-padding {
+    padding-right: 10px;
+}
+
+.news-padding {
+    padding-top: 75px;
+}
+
+.news-container {
+    padding-top: 70px;
+}
+
+.news-box-padding {
+    padding-bottom: 64px;
+}
+
+.news-box-body-container {
+    padding-left: 59px;
+    padding-top: 33px;
+    padding-right: 59px;
+}
+
+.featured-section-container {
+    padding-top: 208px;
+}
+
+.news-read-more-container {
+    padding-left: 973px;
+}
+
+.featured-section-container {
+    padding-bottom: 128px;
+}
+
+.featured-event-header-container {
+    padding-left: 40px;
+    padding-top: 42px;
+    padding-right: 42px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+    color: #003D79;
+}
+
+.featured-event-vector {
+    float: right;
+}
+
+.featured-event-card-padding {
+    display: inline-block;
+    padding-right: 119px;
 }
 
 /* -------------------------------------------------------------------------- */
