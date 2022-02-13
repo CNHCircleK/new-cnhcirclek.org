@@ -34,7 +34,7 @@
                                 <a class="nav-link" aria-current="page" href="#">HOME</a>
                             </li>
                             <li class="nav-item" id="nav-li">
-                                <a class="nav-link" href="#">ABOUT</a>
+                                <a class="nav-link" href="/about.php?page_id=42">ABOUT</a>
                             </li>
                             <li class="nav-item" id="nav-li">
                                 <a class="nav-link" href="#">LEADERSHIP</a>
