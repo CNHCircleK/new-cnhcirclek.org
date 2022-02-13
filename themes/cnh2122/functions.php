@@ -31,7 +31,8 @@ function sunnyCNH_register_scripts() {
     wp_enqueue_script('sunnyCNH-bootstrap', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', array(), '4.4.1', true);
     
     //Remember to move the main.js file to the proper directory
-    wp_enqueue_style('sunnyCNH-main', get_template_directory_uri(). "/assets/js/main.js", array(), '1.0', true);
+    wp_enqueue_script('sunnyCNH-main', get_template_directory_uri()."/assets/js/main.js");
+    wp_localize_script('sunnyCNH-main', 'myScript', array('template_url' => get_bloginfo('template_url')));
 }
 
 add_action('wp_enqueue_scripts', 'sunnyCNH_register_scripts');
