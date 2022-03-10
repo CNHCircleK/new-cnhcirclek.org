@@ -54,7 +54,18 @@ with others.
 /*	0. CSS Reset
 /* -------------------------------------------------------------------------- */
 
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
 a, a:hover, a:focus, a:active {
+    color: #000;
     text-decoration: none;
 }
 
@@ -68,150 +79,386 @@ body {
     position: relative;
     width:  100%;
     height: 100%;
-    background: #F8F8F8;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 body .main-wrapper {
-   max-width: 1440px;
-   max-height: 2715px;
+   width: 1440px;
+   display: flex;
    margin-left: auto;
    margin-right: auto;
-   border: 5px solid red; 
+   background: #F8F8F8;
 }
 
 body .main-col {
-    max-width: 948px;
-    max-height: 2715px;
-    border: 5px solid blue;
+    /* width: 62.5%; */
+    width: 60%;
+    margin-top: 85px;
+    margin-bottom: 85px;
+    margin-left: 80px;
+    margin-right: 50px;
+}
+
+body .side-col {
+    /* width: 37.5%; */
+    width: 40%;
+    margin-top: 85px;
+    /* margin-bottom: 85px; */
+    margin-right: 80px;
+}
+
+body .secondary-wrapper{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #F8F8F8;
+}
+
+body .bottom-half {
+    width: 88.80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* -------------------------------------------------------------------------- */
 /*	2. Element Base
 /* -------------------------------------------------------------------------- */
 
-.title {
+h1 {
     display: inline;
+    font-family: Proxima Nova;
     font-style: normal;
     font-weight: bold;
     font-size: 43px;
     line-height: 52px;
-    color:#000000;
+    color: #000000;
 }
 
-.title-blue {
-    display: inline;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 43px;
-    line-height: 52px;
-    color:#00A4D8;
-}
-
-.paragraph {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 29px;
-}
-
-.sub-title {
+h2 {
+    font-family: Proxima Nova;
     font-style: normal;
     font-weight: bold;
     font-size: 32px;
     line-height: 39px;
+    color: #000000;
 }
 
-.page-link {
-    display: inline-block;
+p {
+    font-family: Proxima Nova;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.link-card {
     width: 330px;
-    height: 43px;
-    border: none;
-    background-color: #F8F8F8;
-}
-
-.page-link-text {
+    font-family: Proxima Nova;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
     line-height: 29px;
     color: #003D79;
+    transition: all .3s ease-out;
 }
 
-.page-link-vector {
-    position: relative;
-    float: right;
+.link-card:after {
+    content: " ";
+    display: block;
+    border-top: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
+    border-radius: 45px;
+    margin-top: 15px;
 }
 
-.page-link-border {
+.link-card:hover {
+    color:#00A4D8;
+}
+
+.link-card:hover::after {
+    border-color: #00A4D8;
+}
+
+.card-box {
+    width: 260px;
+    height: 340px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all .3s ease-out;
+}
+
+.card-box:hover {
+    background: #003D79;
+}
+
+.card-header {
+    padding: 20px 0 0 0;
+    background: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #003D79;
+    width: 215px;
+    margin-left: auto;
+    margin-right:auto;
+    border: none;
+}
+
+.card-header:after {
+    content: " ";
+    display: block;
+    border-top: 1.5px solid #00A4D8;
+    border-bottom: 1.5px solid #00A4D8;
+    border-radius: 45px;
+    margin-top: 15px;
+}
+
+.card-image-text {
+    display: none;
+    width: 219px;
+    height: 128px;
     position: absolute;
-    left: 0;
-    bottom: 0;
+    top: 30px;
+    left: 20px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
 }
 
-.tenet-card {
-    width: 262px;
-    height: 342px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    transition: 0.3s;
+.card-box:hover .card-header{
+    color: #FFF;
 }
 
+.card-box:hover .card-image-text {
+    display: block;
+}
+
+.card-box:hover .card-image{
+    opacity: .2;
+}
+
+.updates-box {
+    margin-left: auto;
+    margin-right: auto;
+    width: 420px;
+    height: 620px;
+    border: 5px solid #003D79;
+    background: #FFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.news-update {
+    display: flex;
+    width: 80%;
+    margin-bottom: 4%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-box {
+    width: 1260px;
+    height: 290px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border: 5px solid #003D79;
+    background: #FFF;
+}
+
+.news-header {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: #003D79;
+}
+
+.news-author {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 20px;
+    color: #696464;
+}
+
+.news-paragraph {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.news-button {
+    border: none;
+    width: 165px;
+    height: 60px;
+    float: right;
+    margin-top: 65px;
+    background: #003D79;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+}
+
+.news-button:hover {
+    background: #00A4D8;
+    transition: all .3s ease-out;
+}
+
+.featured-card {
+    width: 570px;
+    height: 440px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid #E5E5E5;
+    background: #FFF;
+    transition: all .3s ease-out;
+}
+
+.featured-card-header {
+    padding: 20px 0 0 0;
+    background: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 32px;
+    /* identical to box height */
+    color: #003D79;
+    width: 510px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: 40px;
+    border: none;
+}
+
+.featured-card-header:after {
+    content: " ";
+    display: block;
+    border-top: 1.5px solid #000;
+    border-bottom: 1.5px solid #000;
+    border-radius: 45px;
+    margin-top: 15px;
+}
+
+.featured-card:hover {
+    background: #003D79;
+}
+
+.featured-card:hover .featured-card-header {
+    color: #FFF;
+}
+
+.featured-card:hover .featured-card-header:after {
+    border-color: #00A4D8;
+}
 
 /* -------------------------------------------------------------------------- */
 /*	3. Helper Classes
 /* -------------------------------------------------------------------------- */
 
-.padding-left-standard {
-    padding-left: 85px;
+.card-image-container {
+    position: relative;
+    text-align: center;
 }
 
-.padding-left-indent {
-    padding-left: 82px;
+.featured-cards-container {
+    display: flex; 
+    padding-bottom: 130px;
 }
 
-.padding-left-hanging {
-    padding-left: 77px;
+.news-cards {
+    margin-bottom: 180px;
 }
 
-.title-padding {
-    padding-top: 86px; 
-    padding-bottom: 56px;
+.news-content {
+    margin: 30px 60px;
 }
 
-.page-link-padding {
-    padding-top: 0px;
-    padding-left: 10px;
-    padding-right: 3px;
-    padding-bottom: 14px;
+.news-info {
+    height: 90px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 29px;
+    color: #000000;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.page-link-spacing {
-    display: inline-block;
-    padding-right: 131px;
+.news-info:hover {
+    color:#00A4D8;
 }
 
-.front-page-links {
-    padding-top: 99px;
-    padding-bottom: 87px;
-}
-
-.tenet-card-container {
-    padding-left: 75px;
-    padding-top: 17px;
-}
-
-.tenet-card-header-container {
-    padding-left: 22px;
-    padding-right: 22px;
-    padding-top: 20px;
+.news-date {
+    width: 12%;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    line-height: 29px;
+    font-size: 20px;
+    line-height: 146.8%;
     color: #003D79;
+    margin-right: 30px;
 }
 
-.tenet-card-vector {
-    float: right;
+.org-row {
+    text-align: center;
+}
+
+.card-row {
+    display: flex;
+}
+
+.card-image {
+    display: block;
+    margin: 20px auto 0 auto;
+}
+
+.link-indent {
+    display: inline;
+    padding-left: 10px;
+}
+
+.link-vector {
+    width: 24px;
+    height: 24px;
+    float: right; 
+    margin-top: 5px;
+}
+
+.link-container {
+    width: 330px;
+    height: 40px;
+}
+
+.link-row {
+    padding-bottom:90px; 
+    display:flex;
+}
+
+.sunny-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+.blue-text {
+    color: #00A4D8;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -220,242 +467,238 @@ body .main-col {
 
 .banner {
     width: 100%;
-    height: 261px;
+    height: auto;
     background: rgba(229, 229, 229, 0.66);
 }
 
-header .nav-container {
-    max-width: 1440px;
-    height: 261px;
+.masthead {
+    display: block;
+    padding-top: 25px;
     margin-left: auto;
     margin-right: auto;
-}
-
-header .nav-masthead-container {
-    padding-top: 26px;
-}
-
-header .nav-masthead {
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
+    width: auto\9;
+}
+
+.container-no-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.nav-default {
     display: block;
-}
-
-header .nav-ul-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    left: 4.34%;
-    right: 4.41%;
-    top: 75.86%;
-    bottom: 4.21%;
-
-    
-    padding-left: 62.5px;
-    padding-right: 63.5px;
-}
-
-header .nav-ul {
-    padding: 0 0 0 0;
-    margin: 0 0 0 0;
-}
-
-header .nav-li {
-    text-decoration: none;
-    display: inline-block;
-
-    font-family: Proxima Nova;
+    margin-top: 30px;
+    margin-bottom: 10;
+    padding: 0;
+    color: #000;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 24px;
-    text-align: center;
     letter-spacing: 0.085em;
+}
 
-    color: #000000;
+.container-fluid {
+    padding: 0;
 
+}
 
-    /* Inside Auto Layout */
-
-    flex: none;
-    order: 1;
-    align-self: stretch;
-    flex-grow: 0;
+.navbar-nav li {
+    padding-right: 60px;
 }
 
 
-header .nav-li-a-first {
-    display: block;
-    text-decoration: none;
-    color: #000000;
-    padding-left: 10px;
-    padding-right: 30px;
-    padding-bottom: 37px;
-    padding-top: 34px;
+.nav-link:hover {
+    color: #00A4D8 !important;
 }
+/* -------------------------------------------------------------------------- */
+/*	5. Menu Modal
+/* -------------------------------------------------------------------------- */
 
-header .nav-li-a-last {
-    display: block;
-    text-decoration: none;
-    color: #000000;
-    padding-left: 30px;
-    padding-right: 10px;
-    padding-bottom: 37px;
-    padding-top: 34px;
-}
+/* -------------------------------------------------------------------------- */
+/*	6. Search Modal
+/* -------------------------------------------------------------------------- */
 
-header .nav-li-a {
-    display: block;
-    position: relative;
-    text-decoration: none;
-    color: #000000;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 37px;
-    padding-top: 34px;
-    margin-left: -5px;
-}
+/* -------------------------------------------------------------------------- */
+/*	7. Page Templates
+/* -------------------------------------------------------------------------- */
 
-header a:hover {
-    color:#00A4D8;
-}
+    /* -------------------------------------------------------------------------- */
+    /*	7a. Cover Template
+    /* -------------------------------------------------------------------------- */
+
+    /* -------------------------------------------------------------------------- */
+    /*	7b. Full Width
+    /* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*	8. Post: Archive
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*	9. Post: Single
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/* 10. Blocks
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*	11. Entry Content
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*	12. Comments
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*	13. Page Pagination
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*	14. Error 404
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*	15. Widgets
+/* -------------------------------------------------------------------------- */
+
 /* -------------------------------------------------------------------------- */
 /*	16. Site Footer
 /* -------------------------------------------------------------------------- */
-footer {
-    position: absolute;
-    width: 100%;
-    left: 0px;
-    top: 3394px;
+footer {  
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: #003D79;
-}
-
-footer .row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-footer .column {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-    align-items: center;
-}
-
-footer .social-text {
-    width: 463px;
-    height: 25px;
-    left: 118px;
-    top: 3464px;
-
-    font-family: Proxima Nova;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 24px;
-    line-height: 29px;
-    text-align: center;
-    letter-spacing: 0.085em;
-
+    height: auto;
+    margin: 0 auto;
+    width: 1440px;
+    /* width: 100%; */
     padding-top: 70px;
-
-    color: #FFFFFF;
-}
-
-footer .social-icons {
-    padding-top: 50px;
-}
-
-footer .contact-questions {
-    width: 300px;
-    height: 30px;
-    left: 200px;
-    top: 3619px;
-    
-    font-family: Proxima Nova;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.085em;
-
-    padding-top: 37px;
-    
-    color: #FFFFFF;
-}
-
-footer .contact-button {
-    width: 280px;
-    height: 62px;
-    left: 210px;
-    top: 3665px;
-    border: 0;
-
-    font-family: Proxima Nova;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.085em;
-    color: white;
-    
-    background-color: #00A4D8;
-    border-radius: 5px;
-}
-
-footer .contact-box {
-    padding-top: 50px;
-}
-
-footer .ticket-box {
-    padding-top: 50px;
     padding-bottom: 70px;
+    color: #fff;
 }
 
-footer .contact-ticket {
-    width: 300px;
-    height: 47px;
-    left: 200px;
-    top: 3777px;
-    
-    font-family: Proxima Nova;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    letter-spacing: 0.085em;
-
-    padding-top: 37px;
-    
-    color: #FFFFFF; 
-}
-
-footer .kiwanis-logo {
-    padding-top: 136px;
-}
-
-footer .copyright {
-    width: 554px;
-    height: 102.08px;
-    top: 3727px;
-    left: 770px;
-
-    font-family: Proxima Nova;
+footer h2 {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
     line-height: 29px;
-    text-align: center;
-
-    padding-top: 44.39px;
-    padding-left: 30px;
-    padding-bottom: 150px;
-
+    letter-spacing: 0.085em;
+    margin-bottom: 30px;
     color: #FFFFFF;
+}
+
+footer h1 {
+    display: inherit;
+    text-align: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #E5E5E5;
+}
+
+footer button {
+    border: none;
+    padding: 18px 40px;
+    background: #00A4D8;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.085em;
+    color: #FFFFFF;
+    transition: all .3s ease-out;
+}
+
+footer button:hover {
+    background: #00C2FF;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-left {
+    text-align: center;
+    width: 50%;
+}
+
+.footer-right {
+    width: 50%;
+    height: 50%;
+    margin: auto 0;
+    text-align: center;
+}
+
+.icon-padding {
+    padding-right: 140px;
+}
+
+.footer-image {
+    max-width: 100%;
+    padding-bottom: 40px;
+    height: auto;
+    width: auto\9;
+}
+
+/* -------------------------------------------------------------------------- */
+/*	17. Media Queries
+/* -------------------------------------------------------------------------- */
+
+@media (min-width: 1355px){
+    .navbar-expand-custom {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-custom .dropdown-menu {
+        position: absolute;
+    }
+    .navbar-expand-custom .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+    .navbar-expand-custom > .container {
+        flex-wrap: nowrap;
+    }
+    .navbar-expand-custom .navbar-collapse {
+        display: flex!important;
+        flex-basis: auto;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer-content {
+        display: inline;
+    }
+
+    .footer-left {
+        width: 100%;
+    }
+
+    .footer-right {
+        width: 100%;
+    }
+}
+
+@media (max-width: 550px) {
+    .icon-padding {
+        padding-right: 110px;
+    }
 }
