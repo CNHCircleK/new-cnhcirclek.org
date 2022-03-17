@@ -17,7 +17,9 @@
 </head>  
 <body>
    <header id="header" class="banner">
-       <img src="<?php bloginfo('template_url'); ?>/assets/images/Navy Masthead (1) 2.png" alt="CNH Masthead" class="masthead">
+       <div class="masthead-container">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/Navy Masthead (1) 2.png" alt="CNH Masthead" class="masthead">
+       </div>
        <div class="container container-no-padding">
            <nav class="navbar nav-default navbar-expand-custom">
                <!-- Container wrapper -->
@@ -34,7 +36,7 @@
                                 <a class="nav-link" aria-current="page" href="#">HOME</a>
                             </li>
                             <li class="nav-item" id="nav-li">
-                                <a class="nav-link" href="/about.php?page_id=42">ABOUT</a>
+                                <a class="nav-link" href="test.php">ABOUT</a>
                             </li>
                             <li class="nav-item" id="nav-li">
                                 <a class="nav-link" href="#">LEADERSHIP</a>

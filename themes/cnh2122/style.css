@@ -81,7 +81,8 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+    background: #F8F8F8;
 }
 
 body .main-wrapper {
@@ -106,7 +107,7 @@ body .side-col {
     width: 40%;
     margin-top: 85px;
     /* margin-bottom: 85px; */
-    margin-right: 80px;
+    /* margin-right: 80px; */
 }
 
 body .secondary-wrapper{
@@ -467,8 +468,18 @@ p {
 
 .banner {
     width: 100%;
+    /* remove margin left and right for full scale banner */
+    /* max-width: 1440px; */
     height: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
     background: rgba(229, 229, 229, 0.66);
+}
+
+.masthead-container {
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .masthead {
@@ -476,6 +487,7 @@ p {
     padding-top: 25px;
     margin-left: auto;
     margin-right: auto;
+    /* max-width: 1440px; */
     max-width: 100%;
     height: auto;
     width: auto\9;
@@ -578,8 +590,8 @@ footer {
     background: #003D79;
     height: auto;
     margin: 0 auto;
-    width: 1440px;
-    /* width: 100%; */
+    /* width: 1440px; */
+    width: 100%;
     padding-top: 70px;
     padding-bottom: 70px;
     color: #fff;
@@ -626,6 +638,9 @@ footer button:hover {
 
 .footer-content {
     display: flex;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer-left {
@@ -688,13 +703,14 @@ footer button:hover {
         display: inline;
     }
 
-    .footer-left {
+    .footer-left , .footer-right {
         width: 100%;
     }
 
-    .footer-right {
-        width: 100%;
+    .footer-left {
+        margin-bottom: 60px;
     }
+
 }
 
 @media (max-width: 550px) {
