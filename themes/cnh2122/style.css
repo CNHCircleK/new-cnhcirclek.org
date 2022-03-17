@@ -73,6 +73,23 @@ a, a:hover, a:focus, a:active {
 /*	1. Document Setup
 /* -------------------------------------------------------------------------- */
 
+@font-face {
+    font-family: Proxima Nova;
+    src: 
+        local('Proxima Nova'),
+        local('ProximaNova-Regular'),
+        url("fonts/ProximaNova-Regular.otf");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Proxima Nova;
+    src:
+        
+        url("fonts/Proxima Nova Bold.otf");
+    font-weight: bold;
+}
+
 body {
     /* HOMEPAGE - LIGHT */
     font-family: Proxima Nova;
