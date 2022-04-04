@@ -11,6 +11,17 @@ function sunnyCNH_theme_support(){
 
 add_action('after_setup_theme', 'sunnyCNH_theme_support');
 
+function sunnyCNH_menus(){
+    $locations = array (
+        'primary' => "Desktop Primary Left sidebar",
+        'footer' => "Footer Menu Items"
+        );
+        
+    register_nav_menus($locations);
+}
+
+add_action('init', 'sunnyCNH_menus');
+
 function sunnyCNH_register_styles() {
     //Will load the necessary libraries for the front page of the CNH Website
     //Array parameter is an array of dependencies; 1st parameter is just a custom reference name 
